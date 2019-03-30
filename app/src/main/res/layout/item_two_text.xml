@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<data>
+    <variable
+        name="person"
+        type="kr.co.woobi.imyeon.realmexam.Person" />
+
+    <import type="java.lang.Integer" />
+</data>
+
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_name"
+            android:text="@{person.name}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/text_age"
+            android:text="@{Integer.toString(person.age)}"
+            android:textSize="24sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Age"/>
+
+    </LinearLayout>
+</layout>
